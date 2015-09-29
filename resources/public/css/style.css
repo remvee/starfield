@@ -6,13 +6,52 @@ html, body {
 #container {
     position: relative;
     height: 100%;
-    background: black;
+    background: #b7d5ff;
     overflow: hidden;
+}
+#container .star-field {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+@keyframes rotate-cw {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate-ccw {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
 }
 .star {
     position: absolute;
-    background: white;
-    opacity: .9;
-    border-radius: 50%;
-    text-align: center;
+    transform: translate3d(0, 0, 0);
+    image-rendering: auto;
+}
+.cw {
+    animation: rotate-cw 2s linear infinite;
+}
+.ccw {
+    animation: rotate-ccw 2s linear infinite;
+}
+.cw-slow {
+    animation: rotate-cw 4s linear infinite;
+}
+.ccw-slow {
+    animation: rotate-ccw 4s linear infinite;
+}
+.cw-fast {
+    animation: rotate-cw .5s linear infinite;
+}
+.ccw-fast {
+    animation: rotate-ccw .5s linear infinite;
 }
