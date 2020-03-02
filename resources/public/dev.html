@@ -12,14 +12,9 @@
     <script src="js-dev/starfield.js" type="text/javascript"></script>
     <script type="text/javascript">
       goog.require('starfield.core');
-      goog.require('user.figwheel');
     </script>
     <script type="text/javascript">
-      user.figwheel.wrap(
-        function(){
-          starfield.core.main(document.getElementById("container"))
-        }
-      );
+      starfield.core.main(document.getElementById("container"))
     </script>
   </body>
 </html>
